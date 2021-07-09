@@ -1,0 +1,31 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory app:title="@string/general_header">
+        <ListPreference
+            app:key="startup"
+            app:title="@string/startup_title"
+            app:entries="@array/startup_entries"
+            app:entryValues="@array/startup_values"
+            app:defaultValue="search"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/movie_header">
+        <ListPreference
+            app:key="nr_of_genres"
+            app:title="@string/nr_of_genres_title"
+            app:entries="@array/nr_of_genres_entries"
+            app:entryValues="@array/nr_of_genres_values"
+            app:defaultValue="3"
+            app:useSimpleSummaryProvider="true" />
+
+        <SwitchPreferenceCompat
+            app:key="adult"
+            app:defaultValue="true"
+            app:summary="@string/adult_summary"
+            app:title="@string/adult_title" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,25 @@
+<resources>
+    <!-- Reply Preference -->
+    <string-array name="startup_entries">
+        <item>Watchlist</item>
+        <item>Favorites</item>
+        <item>Search</item>
+    </string-array>
+    <string-array name="startup_values">
+        <item>watchlist</item>
+        <item>favorites</item>
+        <item>search</item>
+    </string-array>
+    <string-array name="nr_of_genres_entries">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="nr_of_genres_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+</resources>

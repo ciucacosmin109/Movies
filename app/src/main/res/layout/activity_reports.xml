@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReportsActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ReportsActivity">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/pieChart_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="@dimen/card_padding" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pie_chart_title"
+                android:layout_margin="@dimen/card_padding"/>
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/pieChart"
+                android:layout_width="fill_parent"
+                android:layout_height="200dp"
+                android:layout_marginLeft="@dimen/card_padding"
+                android:layout_marginRight="@dimen/card_padding"
+                android:layout_marginBottom="@dimen/card_padding"
+                android:layout_marginTop="@dimen/card_padding_top"/>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/pieChart_card"
+            android:layout_margin="@dimen/card_padding"  >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/table_title"
+                android:layout_margin="@dimen/card_padding"/>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="1"
+                android:layout_marginLeft="@dimen/card_padding"
+                android:layout_marginRight="@dimen/card_padding"
+                android:layout_marginBottom="@dimen/card_padding"
+                android:layout_marginTop="@dimen/card_padding_top">
+                <TableRow>
+                    <TextView
+                        android:text="@string/watchlist_movies"
+                        android:padding="@dimen/table_padding" />
+                    <TextView
+                        android:id="@+id/wl"
+                        android:text="@string/_0"
+                        android:gravity="end"
+                        android:padding="@dimen/table_padding" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:text="@string/favorite_movies"
+                        android:padding="@dimen/table_padding" />
+                    <TextView
+                        android:id="@+id/fav"
+                        android:text="@string/_0"
+                        android:gravity="end"
+                        android:padding="@dimen/table_padding" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:text="@string/total_movies"
+                        android:padding="@dimen/table_padding" />
+                    <TextView
+                        android:id="@+id/total"
+                        android:text="@string/_0"
+                        android:gravity="end"
+                        android:padding="@dimen/table_padding" />
+                </TableRow>
+                <TableRow> <TextView /> <TextView /> </TableRow>
+                <TableRow>
+                    <TextView
+                        android:text="@string/average_rating_watchlist"
+                        android:padding="@dimen/table_padding" />
+                    <TextView
+                        android:id="@+id/wl_avg"
+                        android:text="@string/_0"
+                        android:gravity="end"
+                        android:padding="@dimen/table_padding" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:text="@string/average_rating_favorites"
+                        android:padding="@dimen/table_padding" />
+                    <TextView
+                        android:id="@+id/fav_avg"
+                        android:text="@string/_0"
+                        android:gravity="end"
+                        android:padding="@dimen/table_padding" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:text="@string/average_rating_total"
+                        android:padding="@dimen/table_padding" />
+                    <TextView
+                        android:id="@+id/total_avg"
+                        android:text="@string/_0"
+                        android:gravity="end"
+                        android:padding="@dimen/table_padding" />
+                </TableRow>
+            </TableLayout>
+
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditMovieActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_toolbar"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:isScrollContainer="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/movie_poster"
+                android:layout_width="@dimen/movie_item_image_width"
+                android:layout_height="@dimen/movie_item_image_height"
+                android:contentDescription="@string/movie_poster"
+                android:src="@drawable/ic_baseline_local_movies_24"
+                app:layout_constraintEnd_toStartOf="@+id/movie_genres"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/movie_title_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/movie_title"
+                app:endIconMode="clear_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/movie_poster"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/movie_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/select_genres"
+                android:textSize="12sp"
+                android:layout_marginStart="5dp"
+                app:layout_constraintBottom_toTopOf="@+id/movie_genres"
+                app:layout_constraintStart_toEndOf="@+id/movie_poster" />
+            <Spinner
+                android:id="@+id/movie_genres"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                app:layout_constraintBottom_toBottomOf="@+id/movie_date_layout"
+                app:layout_constraintEnd_toStartOf="@+id/movie_date_layout"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_weight="9"
+                app:layout_constraintStart_toEndOf="@+id/movie_poster" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/movie_date_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/release_date"
+                app:endIconMode="clear_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_weight="10"
+                app:layout_constraintStart_toEndOf="@+id/movie_genres"
+                app:layout_constraintTop_toBottomOf="@+id/movie_title_layout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/movie_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:inputType="date"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/movie_overview_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/overview"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/movie_date_layout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/movie_overview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top|start"
+                    android:inputType="textMultiLine"
+                    android:lines="6" android:maxLines="3"
+                    android:scrollbars="vertical" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RatingBar
+                android:id="@+id/movie_rating"
+                style="?android:attr/ratingBarStyleIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="10"
+                android:rating="0"
+                android:isIndicator="false"
+                android:stepSize="0.1"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintHorizontal_weight="4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/movie_overview_layout" />
+            <SeekBar
+                android:id="@+id/movie_rating_seek_bar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:max="100"
+                app:layout_constraintEnd_toEndOf="@+id/movie_rating"
+                app:layout_constraintStart_toStartOf="@+id/movie_rating"
+                app:layout_constraintTop_toBottomOf="@+id/movie_rating" />
+            <View
+                android:id="@+id/separator"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="3dp"
+                android:layout_marginVertical="@dimen/divider_margin"
+                android:background="#737373"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/movie_rating_seek_bar" />
+
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/movie_adult_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/adult_content"
+                android:layout_marginVertical="@dimen/divider_margin"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/separator" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/bottom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/save_watchlist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/watchlist"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <CheckBox
+                android:id="@+id/save_favorites"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/favorites"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/save_watchlist"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/save_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/save"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginHorizontal="@dimen/divider_margin"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="search_button">45dp</dimen>
+    <dimen name="search_padding">11dp</dimen>
+
+    <dimen name="movie_item_extra_text">13sp</dimen>
+    <dimen name="movie_item_image_height">100sp</dimen>
+    <dimen name="movie_item_image_width">67sp</dimen>
+    <dimen name="movie_item_image_padding">5dp</dimen>
+    <dimen name="movie_item_margin">6dp</dimen>
+    <dimen name="options_button_width">40dp</dimen>
+    <dimen name="divider_margin">10dp</dimen>
+    <dimen name="table_padding">3dp</dimen>
+    <dimen name="card_padding">6dp</dimen>
+    <dimen name="card_padding_top">32dp</dimen>
+</resources>

@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">Movies</string>
+    <string name="options">Options</string>
+
+    <string name="watchlist">Watchlist</string>
+    <string name="favorites">Favorites</string>
+    <string name="search">Search</string>
+
+    <string name="demo_movie_name">Movie name</string>
+    <string name="demo_movie_genres">Action, Drama</string>
+    <string name="demo_movie_year">2019</string>
+    <string name="demo_movie_rating">TMDb: 8.9/10</string>
+    <string name="demo_movie_p_rating">Your rating: 8.5/10</string>
+
+    <string name="movie_rating">IMDb: %.1f/10</string>
+    <string name="movie_p_rating">You: %.1f/10</string>
+
+    <string name="dots">⋮</string>
+    <string name="add_custom_movie">Add custom movie</string>
+    <string name="genre_name">Genre name</string>
+
+    <string name="edit_movie">Edit movie</string>
+    <string name="delete">Delete</string>
+    <string name="add_to_watchlist">Add to watchlist</string>
+    <string name="add_to_favorites">Add to favorites</string>
+    <string name="move_to_watchlist">Move to watchlist</string>
+    <string name="move_to_favorites">Move to favorites</string>
+    <string name="movie_poster">Movie poster</string>
+    <string name="movie_title">Movie title</string>
+    <string name="release_date">Release date</string>
+    <string name="overview">Overview</string>
+    <string name="save">Save</string>
+    <string name="adult_content">Adult content</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="settings">Settings</string>
+
+    <!-- Preference Headers -->
+    <string name="title">Settings</string>
+    <string name="general_header">General settings</string>
+    <string name="movie_header">Movie settings</string>
+
+    <!-- Preferences -->
+    <string name="startup_title">Startup page</string>
+    <string name="adult_title">Include adult movies</string>
+    <string name="nr_of_genres_title">Number of genres displayed</string>
+
+    <!-- Summaries -->
+    <string name="adult_summary">This setting will show up search results that includes adult related movies</string>
+
+    <string name="pie_chart">Pie chart</string>
+    <string name="table_report">Table report</string>
+    <string name="history_report">Report history (firebase)</string>
+    <string name="generate_reports">Generate reports</string>
+    <string name="pie_chart_title">1. Pie chart report (favorites movies grouped by stars)</string>
+    <string name="table_title">2. Table report</string>
+    <string name="watchlist_movies">Watchlist movies</string>
+    <string name="favorite_movies">Favorite movies</string>
+    <string name="total_movies">Total movies</string>
+    <string name="average_rating_favorites">Average rating (Favorites)</string>
+    <string name="average_rating_watchlist">Average rating (Watchlist)</string>
+    <string name="average_rating_total">Average rating (Total)</string>
+    <string name="_0">0</string>
+    <string name="_01_01_2021">01/01/2021</string>
+    <string name="friendly_name">Friendly name</string>
+    <string name="save_pair">Save pair</string>
+    <string name="select_genres">Select genres</string>
+
+</resources>
